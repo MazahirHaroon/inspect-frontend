@@ -82,3 +82,22 @@ This makes the project **organic and community-driven**, built by the learners, 
    ```bash
    git clone https://github.com/<your-username>/inspect-frontend.git
    ```
+
+## 🔗 Stay Connected
+
+- 💬 WhatsApp Group: [Join by filling this form](https://mazahir-haroon-frontend-engineer.neetoform.com/javascript_crash_course)
+- 🗒️ Notes: Shared via AnyNote after each class
+- 💻 Code: All examples uploaded here on GitHub
+- 🎥 YouTube: [Inspect Frontend JavaScript Playlist](https://www.youtube.com/playlist?list=PLPFRrbkGSYzqoFJT-B3_RSMWxA5r0XBDk)
+- 📆 Weekly Calls: Every Friday, 8:30 – 9:30 PM IST
+
+
+## 👨‍💻 Maintainer
+
+Inspect Frontend Community 
+Mentored by **Mazahir Haroon**
+📍 Kerala, India
+
+```javascript
+console.log("Namaskaram from Inspect Frontend 👋");
+```
