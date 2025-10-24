@@ -12,85 +12,52 @@ Every folder here connects directly to what we’ve discussed and built together
 
 ---
 
-## 🌍 About Inspect Frontend
+## Repository Structure
 
-**Inspect Frontend** is a **casual tech hangout** for developers and learners from Kerala and beyond, a space to:
+The repository is organised into dedicated folders for different learning paths and teaching formats:
 
-- 💬 Share what you’re learning
-- ❓ Ask doubts and discuss ideas
-- 💼 Post job or internship leads
-- 💻 Talk about JavaScript, frontend frameworks, and developer life
+### `/javascript_courses`
+This folder focuses on **core JavaScript concepts**, taught progressively day by day.  
+Each subfolder or file corresponds to a daily session covering key topics such as:
 
-No spam. No pressure.  
-Just **curious minds, clean code, and community learning**.
+- DOM manipulation  
+- Events and forms  
+- Arrays, objects, and loops  
+- Functions and modules  
+- Building small interactive examples  
 
----
-
-## 💬 Join the WhatsApp Group
-
-Join our active WhatsApp community to stay updated on:
-
-- Upcoming calls and weekly classes 📅
-- Notes shared via AnyNote 🗒️
-- Job updates and open discussions 💬
-
-👉 **[Join Inspect Frontend on WhatsApp by filling this form](https://mazahir-haroon-frontend-engineer.neetoform.com/javascript_crash_course)**
+It’s designed to help learners gain strong fundamentals before moving on to larger frameworks or projects.
 
 ---
 
-## 🎓 Weekly Classes
-
-We conduct **weekly frontend learning sessions**, usually on **Friday evenings (8:30 PM – 9:30 PM)**.
-
-These sessions include:
-
-- Concept discussions
-- Live coding
-- Q&A based on student doubts
-
-Sometimes, when learners request (especially before exams or holidays), we also hold **continuous weekday sessions** to help them progress faster.
+### `/reporters-desk`
+This folder represents our **project-based learning series**, where we apply all the JavaScript concepts to build a complete, real-world web application — *Reporter’s Desk*.  
+It’s a newsroom workflow app that helps learners connect core programming skills with practical product thinking.  
+Each subfolder (Day 1, Day 2, etc.) represents a step in building the application from scratch, first with vanilla JavaScript and later transitioning to React.
 
 ---
 
-## 🎥 Learn Asynchronously via YouTube
+### 🎥 YouTube Learning Series
 
-Alongside our live calls, we also maintain a [**YouTube channel**](https://www.youtube.com/@mazahirharoon) where we upload **separate recorded videos** explaining the same concepts discussed in our sessions, but in a more structured, self-paced format.
+We also maintain a separate **YouTube video series**, where similar (but sometimes broader) topics are explained in a structured, asynchronous way.  
+While the **JavaScript folder** follows our live sessions and practical exercises,  
+the **YouTube lessons** are meant for independent learners who want to revisit or learn at their own pace.
 
-These are **not call recordings**, but freshly recorded lessons made to help learners **revisit or catch up** on topics anytime.
-
-📺 **Watch the JavaScript playlist here:**  
-👉 [Inspect Frontend – JavaScript Learning Series](https://www.youtube.com/playlist?list=PLPFRrbkGSYzqoFJT-B3_RSMWxA5r0XBDk)
-
----
-
-## 🧠 How This Content is Created
-
-Every piece of content here — from a simple function to a full project — is **inspired by real discussions** with learners.  
-When a student asks a “why” or “how” question, that often becomes:
-
-- a new code example in this repo
-- a detailed note in AnyNote
-- or a video topic on YouTube
-
-This makes the project **organic and community-driven**, built by the learners, for the learners.
+**Watch the JavaScript Learning Series:**  
+[Inspect Frontend – JavaScript Playlist](https://www.youtube.com/playlist?list=PLPFRrbkGSYzqoFJT-B3_RSMWxA5r0XBDk)
 
 ---
 
-## 🧩 How to Use This Repo
+Together, these three parts — **concept-based learning**, **project-based application**, and **video reinforcement** — ensure a complete, layered understanding of frontend development.
+
+---
+
+## How to Use This Repo
 
 1. Clone the repo:
    ```bash
    git clone https://github.com/<your-username>/inspect-frontend.git
    ```
-
-## 🔗 Stay Connected
-
-- 💬 WhatsApp Group: [Join by filling this form](https://mazahir-haroon-frontend-engineer.neetoform.com/javascript_crash_course)
-- 🗒️ Notes: Shared via AnyNote after each class
-- 💻 Code: All examples uploaded here on GitHub
-- 🎥 YouTube: [Inspect Frontend JavaScript Playlist](https://www.youtube.com/playlist?list=PLPFRrbkGSYzqoFJT-B3_RSMWxA5r0XBDk)
-- 📆 Weekly Calls: Every Friday, 8:30 – 9:30 PM IST
-
 
 ## 👨‍💻 Maintainer
 
