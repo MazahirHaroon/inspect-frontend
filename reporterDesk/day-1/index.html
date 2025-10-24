@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Reporter's Desk — Day 1</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+        <header class="app-header">
+            <h1>Reporter's Desk — Day 1</h1>
+            <button id="new-pitch-btn">New Pitch</button>
+        </header>
+
+
+        <main id="board" class="board">
+            <section id="col-pitch" class="column" data-status="pitch">
+                <h2>Pitch</h2>
+                <div class="column-list" id="list-pitch"></div>
+            </section>
+
+
+            <section id="col-assigned" class="column" data-status="assigned">
+                <h2>Assigned</h2>
+                <div class="column-list" id="list-assigned"></div>
+            </section>
+
+
+            <section id="col-inprogress" class="column" data-status="inprogress">
+                <h2>In Progress</h2>
+                <div class="column-list" id="list-inprogress"></div>
+            </section>
+
+
+            <section id="col-factcheck" class="column" data-status="factcheck">
+                <h2>Fact-check</h2>
+                <div class="column-list" id="list-factcheck"></div>
+            </section>
+
+
+            <section id="col-ready" class="column" data-status="ready">
+                <h2>Ready</h2>
+                <div class="column-list" id="list-ready"></div>
+            </section>
+
+
+            <section id="col-published" class="column" data-status="published">
+                <h2>Published</h2>
+                <div class="column-list" id="list-published"></div>
+            </section>
+        </main>
+
+
+        <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+            <div class="modal-content">
+                <h3>New Pitch</h3>
+                <form id="pitch-form">
+                    <div>
+                        <label for="pitch-title">Title</label>
+                        <br />
+                        <input id="pitch-title" maxlength="120" required />
+                    </div>
+                    <div>
+                        <label for="pitch-summary">Summary</label>
+                        <br />
+                        <textarea id="pitch-summary" rows="3"></textarea>
+                    </div>
+                    <div>
+                        <label for="pitch-beat">Beat</label>
+                        <br />
+                        <input id="pitch-beat" placeholder="e.g. City" />
+                    </div>
+                    <div>
+                        <label for="pitch-tags">Tags (comma separated)</label>
+                        <br />
+                        <input id="pitch-tags" placeholder="politics,health" />
+                    </div>
+                    <div class="modal-actions">
+                        <button type="submit">Create</button>
+                        <button type="button" id="modal-cancel">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script type="module" src="src/app.js"></script>
+    </body>
+
+</html>
