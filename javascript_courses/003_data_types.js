@@ -1,4 +1,11 @@
-// Anynote link: https://any.coop/AB2DLqz9p8Fk7KCdSnkivxZPhPYw9K3ecArpX5jqcEj7Yuga/day-2-inspect-frontend-javascript-crash-course
+/*
+------------------------------
+Links: 
+
+- Anynote link: https://any.coop/AB2DLqz9p8Fk7KCdSnkivxZPhPYw9K3ecArpX5jqcEj7Yuga/day-2-inspect-frontend-javascript-crash-course
+
+------------------------------
+*/
 
 // Based on how it is Stored & Accessed from Memory
 
