@@ -37,7 +37,27 @@ Each subfolder (Day 1, Day 2, etc.) represents a step in building the applicatio
 
 ---
 
-### 🎥 YouTube Learning Series
+### `/ObjectAndArrays`
+
+This folder introduces a **new foundational mini-series** focused on understanding **Objects and Arrays** in JavaScript through relatable, real-world examples.
+
+The current subfolder, `LibraryManagementSystem`, walks learners through how data can be structured, accessed, and manipulated in JavaScript applications using objects and arrays.
+
+Each day builds on the previous one with progressive improvements:
+
+- **Day 1**: Introduction to Objects and Arrays through a simple “Library Borrow System.”
+Learners understand how to store and update information inside objects and arrays dynamically.
+
+- **Day 2**: Extends functionality with a “Return Book” feature, teaching how to remove items from arrays using .splice() and update the DOM accordingly.
+
+- (Upcoming Days) will include features like counting available books, tracking returned items, and visualizing library statistics — gradually connecting core data concepts to real UI interactions.
+
+**Learning Goal:**
+> Help learners intuitively grasp how **objects store related data** and how **arrays manage collections of those data units**, all through a practical, story-driven example rather than abstract code snippets.
+
+---
+
+### YouTube Learning Series
 
 We also maintain a separate **YouTube video series**, where similar (but sometimes broader) topics are explained in a structured, asynchronous way.  
 While the **JavaScript folder** follows our live sessions and practical exercises,  
