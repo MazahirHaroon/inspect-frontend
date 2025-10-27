@@ -1,0 +1,35 @@
+<!-- 
+Notes: https://any.coop/AB2DLqz9p8Fk7KCdSnkivxZPhPYw9K3ecArpX5jqcEj7Yuga/day-2-library-management-javascript-react-crash-course 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Library Borrow System</title>
+    </head>
+
+    <body>
+        <h2>Borrow a Book</h2>
+
+        <label>Book Title: </label>
+        <input type="text" id="bookTitle" placeholder="Enter book name"><br><br>
+
+        <label>Borrower Name: </label>
+        <input type="text" id="borrowerName" placeholder="Enter your name"><br><br>
+
+        <label>Days Borrowed: </label>
+        <input type="number" id="daysBorrowed" placeholder="Enter number of days"><br><br>
+
+        <button id="submitBtn">Submit</button>
+
+        <h3>Borrowed Books (List View):</h3>
+        <ul id="bookList"></ul>
+
+        <h3>Library Object (JSON View):</h3>
+        <pre id="output"></pre>
+
+        <script src="./script.js"></script>
+    </body>
+
+</html>
