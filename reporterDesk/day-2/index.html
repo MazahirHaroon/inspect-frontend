@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Reporter's Desk — Day 2</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+        <header class="app-header">
+            <h1>Reporter's Desk — Day 2</h1>
+            <div>
+                <button id="new-pitch-btn">New Pitch</button>
+                <input id="search" placeholder="Search title / tags / beat" aria-label="Search stories" />
+            </div>
+        </header>
+
+        <main id="board" class="board" role="main">
+            <section id="col-pitch" class="column" data-status="pitch" aria-labelledby="h-pitch">
+                <h2 id="h-pitch">Pitch</h2>
+                <div class="column-list" id="list-pitch" tabindex="0"></div>
+            </section>
+
+            <section id="col-assigned" class="column" data-status="assigned" aria-labelledby="h-assigned">
+                <h2 id="h-assigned">Assigned</h2>
+                <div class="column-list" id="list-assigned" tabindex="0"></div>
+            </section>
+
+            <section id="col-inprogress" class="column" data-status="inprogress" aria-labelledby="h-inprogress">
+                <h2 id="h-inprogress">In Progress</h2>
+                <div class="column-list" id="list-inprogress" tabindex="0"></div>
+            </section>
+
+            <section id="col-factcheck" class="column" data-status="factcheck" aria-labelledby="h-factcheck">
+                <h2 id="h-factcheck">Fact-check</h2>
+                <div class="column-list" id="list-factcheck" tabindex="0"></div>
+            </section>
+
+            <section id="col-ready" class="column" data-status="ready" aria-labelledby="h-ready">
+                <h2 id="h-ready">Ready</h2>
+                <div class="column-list" id="list-ready" tabindex="0"></div>
+            </section>
+
+            <section id="col-published" class="column" data-status="published" aria-labelledby="h-published">
+                <h2 id="h-published">Published</h2>
+                <div class="column-list" id="list-published" tabindex="0"></div>
+            </section>
+        </main>
+
+        <!-- Create / Edit modal (same form used for create + edit) -->
+        <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="modal-content">
+                <h3 id="modalTitle">New Pitch</h3>
+                <form id="pitch-form">
+                    <input type="hidden" id="pitch-id" />
+                    <div>
+                        <label for="pitch-title">Title</label><br />
+                        <input id="pitch-title" maxlength="120" required />
+                    </div>
+                    <div>
+                        <label for="pitch-summary">Summary</label><br />
+                        <textarea id="pitch-summary" rows="3"></textarea>
+                    </div>
+                    <div>
+                        <label for="pitch-beat">Beat</label><br />
+                        <input id="pitch-beat" placeholder="e.g. City" />
+                    </div>
+                    <div>
+                        <label for="pitch-tags">Tags (comma separated)</label><br />
+                        <input id="pitch-tags" placeholder="politics,health" />
+                    </div>
+                    <div class="modal-actions">
+                        <button type="submit" id="modal-save">Save</button>
+                        <button type="button" id="modal-cancel">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script type="module" src="src/app.js"></script>
+    </body>
+
+</html>
