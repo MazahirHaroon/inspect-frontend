@@ -13,35 +13,35 @@ const library = {
 
 // Handle button click
 document.getElementById('submitBtn').addEventListener('click', function () {
-  // Step 1: Get input values
-  const title = document.getElementById('bookTitle').value;
-  const borrower = document.getElementById('borrowerName').value;
-  const days = document.getElementById('daysBorrowed').value;
+  // Step 1: Get input values and assign them to variables
+  const title = document.getElementById('bookTitle');
+  const borrower = document.getElementById('borrowerName');
+  const days = document.getElementById('daysBorrowed');
 
-  // Step 2: Create a new object for this borrowed book
+  // Step 2: Create a new book object using its values
   const borrowedBook = {
     title: title,
     borrower: borrower,
     daysBorrowed: days,
   };
 
-  // Step 3: Push it into the borrowedBooks array
+  // Step 3: Push this new object into the 'borrowedBooks' array inside 'library' object
   library.borrowedBooks.push(borrowedBook);
 
-  // Step 4: Update the visual list of borrowed books
-  displayBorrowedBooks();
-
-  // Step 5: Show the full object (for understanding structure)
+  // Step 4: Show the updated object structure on the page
   document.getElementById('output').textContent = JSON.stringify(
     library,
     null,
     2
   );
 
-  // Step 6: Clear inputs
+  // Step 5: Clear inputs
   document.getElementById('bookTitle').value = '';
   document.getElementById('borrowerName').value = '';
   document.getElementById('daysBorrowed').value = '';
+
+  // (New Step) Step 6: Show the updated object structure on the page
+  displayBorrowedBooks();
 });
 
 // Function to display borrowed books in a readable way

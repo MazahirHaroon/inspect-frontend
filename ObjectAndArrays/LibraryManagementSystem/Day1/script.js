@@ -14,18 +14,18 @@ const library = {
 // Handle the click event
 document.getElementById('submitBtn').addEventListener('click', function () {
   // Step 1: Get input values and assign them to variables
-  const title = document.getElementById('bookTitle').value;
-  const borrower = document.getElementById('borrowerName').value;
-  const days = document.getElementById('daysBorrowed').value;
+  const title = document.getElementById('bookTitle');
+  const borrower = document.getElementById('borrowerName');
+  const days = document.getElementById('daysBorrowed');
 
-  // Step 2: Create a new book object using those values
+  // Step 2: Create a new book object using its values
   const borrowedBook = {
-    title: title,
-    borrower: borrower,
-    daysBorrowed: days,
+    title: title.value,
+    borrower: borrower.value,
+    daysBorrowed: days.value,
   };
 
-  // Step 3: Push this new object into the 'borrowedBooks' array inside 'library'
+  // Step 3: Push this new object into the 'borrowedBooks' array inside 'library' object
   library.borrowedBooks.push(borrowedBook);
 
   // Step 4: Show the updated object structure on the page
