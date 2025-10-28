@@ -4,9 +4,9 @@ Notes: https://any.coop/AB2DLqz9p8Fk7KCdSnkivxZPhPYw9K3ecArpX5jqcEj7Yuga/day-2-l
 
 // Our main object — represents the Library system
 const library = {
-  name: 'Greenwood Public Library',
-  location: 'Main Street, Springfield',
-  totalBooks: 1200,
+  name: 'Ernakulam Public Library',
+  location: 'Convent Rd, Kochi, Ernakulam',
+  totalBooks: 200000,
   isOpen: true,
   borrowedBooks: [], // 👈 this is an array that will hold multiple borrowed book objects
 };

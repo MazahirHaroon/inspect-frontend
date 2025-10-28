@@ -4,9 +4,9 @@
 
 // Our main object — represents the Library system
 const library = {
-  name: 'Greenwood Public Library',
-  location: 'Main Street, Springfield',
-  totalBooks: 1200,
+  name: 'Ernakulam Public Library',
+  location: 'Convent Rd, Kochi, Ernakulam',
+  totalBooks: 200000,
   isOpen: true,
   borrowedBooks: [], // 👈 this is an array where each entry will be an object
 };
