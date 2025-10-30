@@ -27,12 +27,13 @@ document.getElementById('submitBtn').addEventListener('click', function () {
 
   // Step 3: Push this new object into the 'borrowedBooks' array inside 'library' object
   ekmLibrary.borrowedBooks.push(borrowedBook);
-  // Step 5: Clear inputs
+
+  // Step 4: Clear inputs
   document.getElementById('bookTitle').value = '';
   document.getElementById('borrowerName').value = '';
   document.getElementById('daysBorrowed').value = '';
 
-  // (New Step) Step 6: Show the updated object structure on the page
+  // (New Step) Step 5: Show the updated object structure on the page
   displayBorrowedBooks();
 });
 
@@ -40,7 +41,6 @@ document.getElementById('submitBtn').addEventListener('click', function () {
 function displayBorrowedBooks() {
   const list = document.getElementById('bookList');
   list.innerHTML = '';
-
   // Loop through borrowedBooks array
   ekmLibrary.borrowedBooks.forEach(function (book, index) {
     const listItem = document.createElement('li');
