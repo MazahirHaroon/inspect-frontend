@@ -39,7 +39,7 @@ document.getElementById('submitBtn').addEventListener('click', function () {
 
 // Function to display borrowed books in a readable way
 function displayBorrowedBooks() {
-  const list = document.getElementById('bookList');
+  const list = document.getElementById('output');
   list.innerHTML = '';
   // Loop through borrowedBooks array
   ekmLibrary.borrowedBooks.forEach(function (book, index) {
