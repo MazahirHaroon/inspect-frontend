@@ -20,22 +20,13 @@ document.getElementById('submitBtn').addEventListener('click', function () {
 
   // Step 2: Create a new book object using its values
   const borrowedBook = {
-    title: title,
-    borrower: borrower,
-    daysBorrowed: days,
+    title: title.value,
+    borrower: borrower.value,
+    daysBorrowed: days.value,
   };
 
   // Step 3: Push this new object into the 'borrowedBooks' array inside 'library' object
   ekmLibrary.borrowedBooks.push(borrowedBook);
-
-  // Step 4: Show the updated object structure on the page
-  // document.getElementById('output').textContent = JSON.stringify(
-  //   ekmLibrary,
-  //   null,
-  //   2
-  // );
-  console.log(ekmLibrary);
-
   // Step 5: Clear inputs
   document.getElementById('bookTitle').value = '';
   document.getElementById('borrowerName').value = '';
@@ -48,7 +39,7 @@ document.getElementById('submitBtn').addEventListener('click', function () {
 // Function to display borrowed books in a readable way
 function displayBorrowedBooks() {
   const list = document.getElementById('bookList');
-  list.innerHTML = ''; // clear old list
+  list.innerHTML = '';
 
   // Loop through borrowedBooks array
   ekmLibrary.borrowedBooks.forEach(function (book, index) {

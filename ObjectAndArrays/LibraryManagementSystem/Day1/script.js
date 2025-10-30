@@ -41,14 +41,6 @@ document.getElementById('submitBtn').addEventListener('click', function () {
   // Step 3: Push this new object into the 'borrowedBooks' array inside 'library' object
   library.borrowedBooks.push(borrowedBook);
 
-  // Step 4: Show the updated object structure on the page
-  // document.getElementById('output').textContent = JSON.stringify(
-  //   library,
-  //   null,
-  //   2
-  // );
-  console.log(ekmLibrary);
-
   // Step 5: Clear the inputs for next entry
   document.getElementById('bookTitle').value = '';
   document.getElementById('borrowerName').value = '';
