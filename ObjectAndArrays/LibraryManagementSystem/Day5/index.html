@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Day 5 - Access Object Keys Dynamically</title>
+    </head>
+
+    <body>
+        <h1>Get User Balance</h1>
+
+        <label>Please enter username:</label>
+        <input type="text" id="input1" placeholder="Enter name like Naveen or Shiv" />
+        <button id="btn1">Get Balance</button>
+
+        <script>
+            /*
+              Accessing Object Properties Dynamically (Bracket Notation)
+      
+              - Scenario:
+                You have an object storing account balances for multiple users.
+                When the user types a name into the input box, we should show that user’s balance.
+      
+              - Why bracket notation?
+                We don’t always know the key name (like 'naveen' or 'shiv') in advance.
+                The key will come from user input — and variables can't be used directly with dot notation.
+                (❌ accountBalance.inputValue → looks for a key literally named "inputValue")
+      
+                ✅ Instead, we use bracket notation:
+                accountBalance[variableName]
+                This allows dynamic access based on the variable’s value.
+            */
+
+            const accountBalance = {
+                naveen: 3000,
+                mazahir: 2000,
+                shiv: 15000,
+                ramesh: 1500,
+            };
+
+            // Get references to the input field and button
+            const input1 = document.querySelector('#input1');
+            const btn1 = document.querySelector('#btn1');
+
+            // Add button click event listener
+            btn1.addEventListener('click', () => {
+                // Step 1: Get the user’s input (name)
+                const inputValue = input1.value;
+
+                // Step 2: Clean the input (make lowercase)
+                const lowerCaseInput = inputValue.toLowerCase()
+
+                // Step 3: Clean the input (remove extra spaces)
+                const trimmedInput = lowerCaseInput.trim();
+
+                // Step 4: Access the balance dynamically using bracket notation
+                const balance = accountBalance[formattedInput];
+
+                // Step 5: Show the result in console (can later display on page)
+                console.log(balance);
+
+                // Bonus:
+                // Try changing "accountBalance[formattedInput]" to "accountBalance.formattedInput"
+                // and see why it doesn’t work
+            });
+        </script>
+    </body>
+
+</html>
