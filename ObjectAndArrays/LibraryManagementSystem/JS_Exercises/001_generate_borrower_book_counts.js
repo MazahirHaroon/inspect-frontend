@@ -1,5 +1,5 @@
 /* 
-Count books per borrower
+Generate Borrower Book Count
 
 - Scenario: Count how many borrowed records each borrower has in the list.
 - Task: Create an object counts where keys are borrower names and values are the number of books 
