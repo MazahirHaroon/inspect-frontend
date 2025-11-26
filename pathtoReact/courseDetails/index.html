@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Inspect Frontend — Intro to JavaScript</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+
+            <header class="card">
+                <div class="brand">
+                    <div class="logo" aria-hidden="true">IF</div>
+                    <div>
+                        <h1>Inspect Frontend — Intro to JavaScript</h1>
+                        <p class="lead">
+                            Inspect Frontend is a casual tech hangout for devs to share what they’re learning, ask
+                            doubts, post job leads,
+                            and discuss JavaScript and frontend engineering. No spam. No pressure. Just curious minds
+                            and clean code. This
+                            is our <span class="brand-color" style="color:var(--accent);font-weight:600">Intro to
+                                JavaScript</span>
+                            session, where we'll explore how code runs in the browser, step by step.
+                        </p>
+
+                        <p style="margin-top:12px;color:var(--muted);font-size:14px;">
+                            <strong>Quick note for students:</strong> Please read the topics and timetable before the
+                            first session.
+                            This page shows exactly what we'll cover and when — it helps you prepare and follow along
+                            with clarity. If
+                            anything is unclear, mention it on the call.
+                        </p>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <!-- Essentials -->
+                <section class="card">
+                    <div class="section-title">
+                        <h2>Headings + ETA (at a glance)</h2>
+                        <div class="eta">Quick view</div>
+                    </div>
+
+                    <ul class="topics">
+                        <li class="topic">
+                            <div class="left"></div>
+                            <div class="content">
+                                <h3>Variables & Basic Types</h3>
+                                <p class="note"><strong>ETA:</strong> 1 hour</p>
+                            </div>
+                        </li>
+
+                        <li class="topic">
+                            <div class="left"></div>
+                            <div class="content">
+                                <h3>Operators & Conditionals</h3>
+                                <p class="note"><strong>ETA:</strong> 1 hour</p>
+                            </div>
+                        </li>
+
+                        <li class="topic">
+                            <div class="left"></div>
+                            <div class="content">
+                                <h3>Functions (declaration & arrow)</h3>
+                                <p class="note"><strong>ETA:</strong> 1 hour</p>
+                            </div>
+                        </li>
+
+                        <li class="topic">
+                            <div class="left"></div>
+                            <div class="content">
+                                <h3>Template Literals</h3>
+                                <p class="note"><strong>ETA:</strong> included in Variables day (1 hour)</p>
+                            </div>
+                        </li>
+
+                        <li class="topic">
+                            <div class="left"></div>
+                            <div class="content">
+                                <h3>Array & Object Basics</h3>
+                                <p class="note"><strong>ETA:</strong> 1 hour</p>
+                            </div>
+                        </li>
+
+                        <li class="topic">
+                            <div class="left"></div>
+                            <div class="content">
+                                <h3>forEach, map, filter and sort</h3>
+                                <p class="note"><strong>ETA:</strong> 1 hour</p>
+                            </div>
+                        </li>
+
+                        <li class="topic">
+                            <div class="left"></div>
+                            <div class="content">
+                                <h3>Spread Operator</h3>
+                                <p class="note"><strong>ETA:</strong> 2 × 1 hour sessions</p>
+                                <div class="sublist">
+                                    <div>Part 1: copying arrays & objects</div>
+                                    <div>Part 2: merging arrays/objects & nested updates</div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="topic">
+                            <div class="left"></div>
+                            <div class="content">
+                                <h3>Switch + Array utilities (includes, indexOf)</h3>
+                                <p class="note"><strong>ETA:</strong> 1 hour</p>
+                            </div>
+                        </li>
+
+                        <li class="topic">
+                            <div class="left"></div>
+                            <div class="content">
+                                <h3>Promises (concept)</h3>
+                                <p class="note"><strong>ETA:</strong> 2 × 1 hour sessions</p>
+                            </div>
+                        </li>
+
+                        <li class="topic">
+                            <div class="left"></div>
+                            <div class="content">
+                                <h3>.then() / .catch()</h3>
+                                <p class="note"><strong>ETA:</strong> 2 × 1 hour sessions</p>
+                            </div>
+                        </li>
+
+                        <li class="topic">
+                            <div class="left"></div>
+                            <div class="content">
+                                <h3>async / await</h3>
+                                <p class="note"><strong>ETA:</strong> 2 × 1 hour sessions</p>
+                            </div>
+                        </li>
+
+                        <li class="topic">
+                            <div class="left"></div>
+                            <div class="content">
+                                <h3>try / catch</h3>
+                                <p class="note"><strong>ETA:</strong> 1 hour</p>
+                            </div>
+                        </li>
+
+                        <li class="topic">
+                            <div class="left"></div>
+                            <div class="content">
+                                <h3>fetch() (GET / POST / async usage)</h3>
+                                <p class="note"><strong>ETA:</strong> 2 × 1 hour sessions</p>
+                            </div>
+                        </li>
+
+                        <li class="topic">
+                            <div class="left"></div>
+                            <div class="content">
+                                <h3>Modules (import / export)</h3>
+                                <p class="note"><strong>ETA:</strong> 1 hour</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Timetable -->
+                <section class="card">
+                    <div class="section-title">
+                        <h2>Timetable (Day 1 → Day 18)</h2>
+                        <div class="eta">Start: Thursday · Repeat: Mon → Tue → Wed</div>
+                    </div>
+
+                    <table style="width:100%;border-collapse:collapse">
+                        <thead>
+                            <tr style="text-align:left;color:var(--muted)">
+                                <th style="padding:8px 6px;border-bottom:1px solid rgba(255,255,255,0.04)">Day</th>
+                                <th style="padding:8px 6px;border-bottom:1px solid rgba(255,255,255,0.04)">Weekday</th>
+                                <th style="padding:8px 6px;border-bottom:1px solid rgba(255,255,255,0.04)">Topic</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding:8px 6px">Day 1</td>
+                                <td style="padding:8px 6px">Variables + Data Types + Template Literals (1h)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 6px">Day 2</td>
+                                <td style="padding:8px 6px">Operators + Conditionals (1h)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 6px">Day 3</td>
+                                <td style="padding:8px 6px">Functions (1h)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 6px">Day 4</td>
+                                <td style="padding:8px 6px">Array & Object Basics (1h)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 6px">Day 5</td>
+                                <td style="padding:8px 6px">forEach, map, filter and sort (1h)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 6px">Day 6</td>
+                                <td style="padding:8px 6px">Spread Operator — Part 1 (copying arrays/objects) (1h)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 6px">Day 7</td>
+                                <td style="padding:8px 6px">Spread Operator — Part 2 (merge + nested updates) (1h)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 6px">Day 8</td>
+                                <td style="padding:8px 6px">Switch + Array Utilities (includes + indexOf) (1h)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 6px">Day 9</td>
+                                <td style="padding:8px 6px">Promises — Part 1 (1h)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 6px">Day 10</td>
+                                <td style="padding:8px 6px">Promises — Part 2 (1h)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 6px">Day 11</td>
+                                <td style="padding:8px 6px">.then() / .catch() — Part 1 (1h)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 6px">Day 12</td>
+                                <td style="padding:8px 6px">.then() / .catch() — Part 2 (1h)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 6px">Day 13</td>
+                                <td style="padding:8px 6px">async/await — Part 1 (1h)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 6px">Day 14</td>
+                                <td style="padding:8px 6px">async/await — Part 2 (1h)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 6px">Day 15</td>
+                                <td style="padding:8px 6px">try / catch — error handling (1h)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 6px">Day 16</td>
+                                <td style="padding:8px 6px">fetch() — Part 1 (GET + basics) (1h)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 6px">Day 17</td>
+                                <td style="padding:8px 6px">fetch() — Part 2 (POST + errors) (1h)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 6px">Day 18</td>
+                                <td style="padding:8px 6px">Modules (import / export) (1h)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <div class="card footer" style="margin-top:16px;">
+                    <div>Made for <strong>Inspect Frontend</strong> — Intro to JavaScript</div>
+                    <div style="color:var(--muted)">Exported: <span id="date"></span></div>
+                </div>
+            </main>
+        </div>
+
+        <script>
+            document.getElementById('date').textContent = new Date().toLocaleString();
+        </script>
+    </body>
+
+</html>
