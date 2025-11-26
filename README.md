@@ -16,6 +16,20 @@ Every folder here connects directly to what we’ve discussed and built together
 
 The repository is organised into dedicated folders for different learning paths and teaching formats:
 
+## `/pathToReact`
+
+This folder contains the material specifically created to help learners move from **JavaScript foundations → React development** efficiently.
+It is divided into three subfolders:
+
+```
+/pathToReact
+  ├─ courseDetails/     # Overview page + timetable + CSS (open index.html in browser)
+  ├─ dailyNotes/        # Numbered day-by-day notes (editable JS files used in class)
+  └─ playground/        # Small live sandbox for running snippets during calls
+```
+
+---
+
 ### `/javascript_courses`
 This folder focuses on **core JavaScript concepts**, taught progressively day by day.  
 Each subfolder or file corresponds to a daily session covering key topics such as:
