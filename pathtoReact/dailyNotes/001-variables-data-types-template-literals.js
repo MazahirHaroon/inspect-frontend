@@ -78,14 +78,33 @@ console.log(`Hello ${personName}, welcome!`);
 
 // Real-life use case:
 // Auto-generated messages like:
-// "Hi Aisha, your order #12345 is out for delivery."
+// "Hi Shafin, your order #12345 is out for delivery."
+
+// 6. null (intentional empty value)
+// Real-life idea:
+// When a form has an empty field on purpose.
+// Example: A user's middle name field is empty because they don't have one.
+
+let middleName = null;
+// null means: "There should be a value here, but right now it's empty on purpose"
+
+// 7. undefined (value not assigned yet)
+// Real-life idea:
+// When you open a new mobile box — the SIM slot exists, but no SIM is inserted yet.
+
+let address;
+// undefined means: "This variable exists, but no value has been given to it yet"
+
+console.log(middleName); // null
+console.log(address); // undefined
 
 // ---------------------------------------------------------------
-// 5. Exercise
+// 8. Exercise
 // Create:
 // - string variable
 // - number variable
 // - boolean
+// - null and undefined
 // - Array of 3 favorite movies
 // - An object describing themselves
 // - A welcome message using template literals
