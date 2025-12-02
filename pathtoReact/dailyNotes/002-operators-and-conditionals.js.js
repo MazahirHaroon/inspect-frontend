@@ -2,17 +2,40 @@
 // Day 2 Notes — Inspect Frontend
 
 // ---------------------------------------------------------------
+
+// BEFORE WE START: =  vs  ==  vs  ===
+// Students saw = yesterday, so today we expand it properly.
+
+// 1. =  (single equals)  → Assignment
+// Real-life idea:
+// "Put this value into this box."
+
+let name = 'Safwan'; // put 'Safwan' inside variable called name
+
+// 2. ==  (double equals)  → Loose comparison (does NOT check type)
+// Avoid this in modern JavaScript — can give confusing results.
+// Example:
+console.log(5 == '5'); // true (number vs string → still true)
+
+// 3. === (triple equals) → Strict comparison (checks value AND type)
+// Always prefer === when comparing.
+
+console.log(5 === '5'); // false (number !== string)
+console.log(5 === 5); // true (same value AND same type)
+
+// -------------
+
 // 1. What are Operators?
 // Operators allow us to perform operations on values.
 // Think of them like actions we perform on real-life information.
 
 // Real-life idea:
-// If Safwan has ₹2000 and Alim gives him ₹3000 more:
+// If Safwan has ₹2000 and Shaba gives him ₹3000 more:
 // Total chocolates = 2000 + 3000
 
 let safwanBalance = 2000;
-let alimBalance = 3000;
-let totalAmount = safwanBalance + alimBalance;
+let shabaBalance = 3000;
+let totalAmount = safwanBalance + shabaBalance;
 // totalAmount becomes 5000
 
 // ---------------------------------------------------------------
@@ -24,7 +47,7 @@ let totalAmount = safwanBalance + alimBalance;
 // % remainder
 
 // Real-life example:
-// If Shaba has a 6000-step goal and wants to divide it equally over 3 days:
+// If Alim has a 6000-step goal and wants to divide it equally over 3 days:
 
 let steps = 6000;
 let days = 3;
@@ -51,7 +74,6 @@ let didAminaPass = aminaScore >= passingScore; // true
 // 4. Logical Operators
 // &&  AND  (both must be true)
 // ||  OR   (at least one true)
-// !   NOT  (opposite)
 
 // Real-life example:
 // Hafiz wants to join the session IF:
@@ -62,10 +84,11 @@ let laptopCharged = false;
 let canJoinCall = hasInternet && laptopCharged; // false
 
 // Another example:
-// Shanas will attend IF it's Monday OR Tuesday.
+// Inspect Frontend Classes are on Monday, Tuesday and Wednesday
 
 let today = 'Tuesday';
-let willShanasAttend = today === 'Monday' || today === 'Tuesday'; // true
+let doWeHaveClass =
+  today === 'Monday' || today === 'Tuesday' || today === 'Wednesday'; // true
 
 // ---------------------------------------------------------------
 // 5. What are Conditionals?
@@ -105,20 +128,7 @@ if (naveenAttendance > 90) {
 }
 
 // ---------------------------------------------------------------
-// 7. Ternary Operator (Short If-Else)
-// condition ? valueIfTrue : valueIfFalse
-
-// Real-life example:
-// If Jamesy is online → "Present"
-// Otherwise → "Absent"
-
-let isJamesyOnline = false;
-let jamesyStatus = isJamesyOnline ? 'Present' : 'Absent';
-
-console.log(jamesyStatus);
-
-// ---------------------------------------------------------------
-// 8. Practical Mini Examples
+// 7. Practical Mini Examples
 
 // Example 1:
 // If Arjun has more than 100 coins in his game, show "Level Up".
@@ -157,4 +167,5 @@ if (aminaLaptop && aminaNotes) {
 // - If Naveen’s score is above 90 → "Top Performer".
 
 // End of Day 2
+// Next: Modulo Operator, Ternary Operator, ! NOT  (opposite)
 // Next: Arrays & Object Basics (Deep Dive)
