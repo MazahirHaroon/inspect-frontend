@@ -165,6 +165,12 @@ if (aminaLaptop && aminaNotes) {
 // - Check if Shaba has completed MORE THAN 3 assignments.
 // - If Thejus walks more than 5000 steps → "Active Day".
 // - If Naveen’s score is above 90 → "Top Performer".
+// - If Rena watched more than 2 tutorial videos, show "Good Progress".
+// - If Jasli’s laptop battery is below 20%, show "Charge Soon!", else show "Battery OK".
+// - If Hafiz slept more than 8 hours, show "Well Rested"; if it is between 5 and 8 hours, show "Okay Sleep"; otherwise show "Sleep More!".
+// - If Naveen has internet AND a laptop, show "Can attend coding class".
+// - If Shanas wakes up on Saturday OR Sunday, show "Weekend Mode".
+// - If Amina has a laptop AND (wifi OR hotspot), show "Ready for Inspect Frontend Class".
 
 // End of Day 2
 // Next: Modulo Operator, Ternary Operator, ! NOT  (opposite)
