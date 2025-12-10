@@ -1,77 +1,102 @@
-// Playground - today's notes (3rd December)
+// Playground - today's notes (10th December)
 
-const students = ['Shafin', 'Amina', 'Jasli', 'Shaba', 'Fida', 'Safwan'];
-//                [ 0.         1.       2.       3.]
-// name_of_array[position]
-// 0,1 ..
+/*
+- Function definition, call
+- parameter, arguments
+- return
+*/
 
-// console.log(students[0]);
-// console.log(students[1]);
-// console.log(students[2]);
-// console.log(students[3]);
+// Input => Machine => Output
 
-// console.log(students.length);
-// console.log(students[students.length - 1]);
+// Solves Code Duplication
+/*
+const nameOne = 'Shafin';
+const nameTwo = 'Amina';
 
-// console.log(students);
+console.log(`Hello ${nameOne}, Good Evening`);
+console.log(`Hello ${nameTwo}, Good Evening`);
+*/
 
-// students.push('Fahad Faasil');
-// console.log(students);
+function printGreeting(name) {
+  console.log(`Hello ${name}, Good Evening`);
+}
 
-// students.pop();
-// console.log(students);
+const nameOne = 'Shafin';
+const nameTwo = 'Amina';
 
-// console.log();
-// students[3] = 'Somebody';
-// console.log(students);
+printGreeting(nameOne);
 
-// const products = ['kitkat', 'dairymilk', 'snickers'];
+printGreeting(nameTwo);
 
-// let userRequest = 'KitKat';
+// JS Execution
+// Memory Phase
+// Memory -> function -> printGreeting
+// Execution Phase
 
-// userRequest = userRequest.toLowerCase();
+/*
+// function definition
+function printGreeting(y) {
+  // parameter
+  console.log(`Hello ${y}, Good Evening`);
+}
+// ends here
 
-// console.log(products.includes(userRequest));
+/// function call (invoke)
+printGreeting(nameOne); // function call with argument
+printGreeting(nameTwo); // function call with argument
 
-// -------------------
-// const rollNo = 123;
-// rollNo = 456;
-// 123, 'hello', false true
+// Output
+// Hello Shafin, Good Evening!
+// Hello Amina, Good Evening!
+*/
 
-const studentDetails = {
-  userName: 'Fathima Fida',
-  followers: 123,
-  post: 14,
-  postDetails: ['first post', 'second post'],
-  securityDetails: {
-    secondaryContact: '21321',
-    bloodGroup: '',
-  },
-};
+// Two arguments/parameters
 
-const details = studentDetails.securityDetails.secondaryContact;
-console.log(details);
+function addNumber(num1, num2) {
+  console.log(num1 + num2);
+  // console.log(num1, num2);
+}
 
-// studentDetails.userName = 'Fida';
-// studentDetails.story = 'Amina';
-// console.log(studentDetails);
+const valueOne = 300;
+const valueTwo = 500;
 
-// const users = ['Amina', 'Shafin', 'Fida'];
+addNumber(valueOne, valueTwo);
 
-const userDetails = [
-  {
-    userName: 'Amina',
-    followers: 123,
-    post: 14,
-  },
-  {
-    userName: 'Shafin',
-    followers: 500,
-    post: 14,
-  },
-  {
-    userName: 'Fida',
-    followers: 123,
-    post: 14,
-  },
-];
+// Return Keyword & Scope
+
+function cardPayment(cardNumber) {
+  // Mimicking an actual payment process
+  console.log('Payment Started');
+  console.log('Payment Completed');
+  const cN = 'Fida';
+  console.log('Hello 1');
+  return cN;
+}
+
+function printBill(cardName) {
+  console.log(`Payment done for ${cardName}`);
+}
+
+const cardName = cardPayment(1234);
+printBill(cardName);
+
+// Ternary Operator
+
+/*
+const marks = 75;
+let passed;
+
+if (marks > 40) {
+  passed = true;
+} else {
+  passed = false;
+}
+
+console.log(passed);
+*/
+
+// Above code can be replaced by:
+
+const marks = 75;
+let passed = marks > 40 ? true : false;
+console.log(passed);
