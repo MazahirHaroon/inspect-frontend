@@ -1,18 +1,42 @@
-// Memory -> main, makePayment, print
-// 1. Memory Phase 2. Execution Phase
-
-main();
-
-function main() {
-  function print() {
-    console.log('Print Bill');
-  }
-  makePayment(print);
+function printBill() {
+  console.log('Print Bill');
 }
 
-function makePayment(f) {
-  console.log('Payment Started');
-  // // Data Fetching - Browser please take care of this and let me know when it ends.
-  console.log('Payment Completed');
-  f();
+makePayment(printBill);
+
+/*
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+..
+
+*/
+function makePayment(printBill) {
+  console.log('Payment Process Started');
+
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', 'https://jsonplaceholder.typicode.com/users/1');
+
+  xhr.onload = function () {
+    console.log('Payment Completed');
+    printBill(); // print only when XHR finishes
+  };
+
+  xhr.onerror = function () {
+    console.log('Payment failed');
+  };
+
+  xhr.send();
 }
