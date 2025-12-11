@@ -1,5 +1,7 @@
 import { movieList } from './db.js';
 
+console.log(movieList);
+
 /*
 Tasks
 
@@ -79,6 +81,22 @@ Else:
    Log: "Movie not found"
 
 Call searchMovie() twice — one for a movie that exists, one that doesn’t.
+
+--------------------------------------------------
+
+/*
+Task 7: Merge your movie array with movieList using the spread operator.
+-----------------------------------------------------------------------
+
+Instructions:
+In Task 1, you created your own array named movies (with 3 movie objects).
+
+Now merge that array with the movieList array imported from db.js.
+
+
+Then:
+- Print the total number of movies in allMovies.
+- Print the first 5 movie titles from allMovies (no loops, use indexing).
 
 --------------------------------------------------
 
