@@ -39,7 +39,7 @@ This folder contains an **interactive React Challenges Viewer**, a tool to pract
 <img width="1239" height="657" alt="image" src="https://github.com/user-attachments/assets/40e1efc2-edd5-40e6-9dcf-e9f74d311329" />
 
 
-Each challenge includes:
+### Each challenge includes:
 
 - a **title**
 - a **question**
@@ -87,6 +87,18 @@ The viewer also includes a **4-theme switcher** to customise the UI.
 
 ---
 
+### YouTube Learning Series
+
+We also maintain a separate **YouTube video series**, where similar (but sometimes broader) topics are explained in a structured, asynchronous way.
+
+[<img width="777" height="550" alt="image" src="https://github.com/user-attachments/assets/cafcd840-31e6-47f7-a23a-e0a72a7e5a13" />](https://www.youtube.com/playlist?list=PLPFRrbkGSYzqoFJT-B3_RSMWxA5r0XBDk)
+
+
+**Watch the playlist here:**
+**[https://www.youtube.com/playlist?list=PLPFRrbkGSYzqoFJT-B3_RSMWxA5r0XBDk](https://www.youtube.com/playlist?list=PLPFRrbkGSYzqoFJT-B3_RSMWxA5r0XBDk)**
+
+---
+
 ### `/javascript_courses`
 
 This folder focuses on **core JavaScript concepts**, taught progressively day by day.
@@ -124,15 +136,6 @@ Each day builds on the previous one with progressive improvements:
 
 **Learning Goal:**
 Help learners intuitively understand how **objects store related data** and how **arrays handle collections**, all through a practical, story-driven example.
-
----
-
-### YouTube Learning Series
-
-We also maintain a separate **YouTube video series**, where similar (but sometimes broader) topics are explained in a structured, asynchronous way.
-
-**Watch the playlist here:**
-**[https://www.youtube.com/playlist?list=PLPFRrbkGSYzqoFJT-B3_RSMWxA5r0XBDk](https://www.youtube.com/playlist?list=PLPFRrbkGSYzqoFJT-B3_RSMWxA5r0XBDk)**
 
 ---
 
