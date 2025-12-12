@@ -1,16 +1,32 @@
-# React + Vite
+# React Challenges
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This folder contains a small scaffold for interactive React code challenges. The purpose is simple: show a grid of challenge tiles (like a chessboard), let users inspect the code, and click **Show solution** to run the specific challenge component.
 
-Currently, two official plugins are available:
+## Project layout
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+/react-challenges
+/index.html <- Vite index (example provided)
+/src
+/challenges <- Put challenge files here (one default-export React component each)
+challenge1.jsx
+challenge2.jsx
+...
+main.jsx <- App entry (renders grid & dynamic loader)
+styles.css <- CSS for the grid / tiles
+```
 
-## React Compiler
+## How it works
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Each file inside `src/challenges/` should default-export a React component. Example:
 
-## Expanding the ESLint configuration
+```jsx
+// src/challenges/challenge1.jsx
+export default function Challenge1() {
+  return <div>Output for challenge 1</div>;
+}
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- The main app uses import.meta.glob (Vite) to discover src/challenges/\*.jsx dynamically. Each discovered module is lazy-loaded when the user clicks Show solution.
+
+- The UI shows a grid of square tiles labeled Show solution 1, Show solution 2, etc. When you click a tile, its component is loaded and rendered in the preview area below the grid.

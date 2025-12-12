@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+     "paths": {
+      "src/*": ["./src/*"],
+      "@challenges/*": ["./src/pages/challenges/*"],
+      "@pages": ["./src/pages/index"],
+      "@rc-components": ["./src/rc-components/index"],
+      "@challenge-viewer": ["./src/rc-components/challenge-viewer/index"],
+      "@utils": ["./src/utils/index"],
+      "@style/*": ["./src/style/*"],
+    },
+    }
+}
