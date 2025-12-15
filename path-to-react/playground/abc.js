@@ -1,102 +1,87 @@
-// Playground - today's notes (10th December)
+// Playground - today's notes (15th December)
 
 /*
-- Function definition, call
-- parameter, arguments
-- return
+- forEach();
+- map();
+- filter();
+- find();
 */
 
-// Input => Machine => Output
+const alphabets = ['A', 'B', 'C', 'C', 'D', 'E'];
+const users = [
+  { name: 'Shafin', id: 1 },
+  { name: 'Amina', id: 2 },
+];
+let response;
+let myArray;
 
-// Solves Code Duplication
-/*
-const nameOne = 'Shafin';
-const nameTwo = 'Amina';
+// forEach
+users.forEach(getDetails);
 
-console.log(`Hello ${nameOne}, Good Evening`);
-console.log(`Hello ${nameTwo}, Good Evening`);
-*/
+const newArray = users.map(getDetails);
+console.log(newArray);
 
-function printGreeting(name) {
-  console.log(`Hello ${name}, Good Evening`);
+function getDetails(value, index) {
+  console.log(`The name is: ${value.name}. Index is ${index}`);
 }
 
-const nameOne = 'Shafin';
-const nameTwo = 'Amina';
+// map
+newArray = alphabets.map(greet);
+console.log(newArray);
 
-printGreeting(nameOne);
-
-printGreeting(nameTwo);
-
-// JS Execution
-// Memory Phase
-// Memory -> function -> printGreeting
-// Execution Phase
-
-/*
-// function definition
-function printGreeting(y) {
-  // parameter
-  console.log(`Hello ${y}, Good Evening`);
-}
-// ends here
-
-/// function call (invoke)
-printGreeting(nameOne); // function call with argument
-printGreeting(nameTwo); // function call with argument
-
-// Output
-// Hello Shafin, Good Evening!
-// Hello Amina, Good Evening!
-*/
-
-// Two arguments/parameters
-
-function addNumber(num1, num2) {
-  console.log(num1 + num2);
-  // console.log(num1, num2);
+function greet(value, index) {
+  console.log(value, index);
+  return value.toLowerCase();
+  // return `Student: ${value}`;
 }
 
-const valueOne = 300;
-const valueTwo = 500;
+// filter
 
-addNumber(valueOne, valueTwo);
+newArray = alphabets.filter(removeC);
 
-// Return Keyword & Scope
+console.log(newArray);
 
-function cardPayment(cardNumber) {
-  // Mimicking an actual payment process
-  console.log('Payment Started');
-  console.log('Payment Completed');
-  const cN = 'Fida';
-  console.log('Hello 1');
-  return cN;
+function removeC(value, index) {
+  if (value === 'C') {
+    return false;
+  } else {
+    return true;
+  }
 }
 
-function printBill(cardName) {
-  console.log(`Payment done for ${cardName}`);
+// find
+
+function findC(value) {
+  if (value === 'C') {
+    return true;
+  }
 }
 
-const cardName = cardPayment(1234);
-printBill(cardName);
-
-// Ternary Operator
-
-/*
-const marks = 75;
-let passed;
-
-if (marks > 40) {
-  passed = true;
-} else {
-  passed = false;
+function findY(value) {
+  if (value === 'Y') {
+    return true;
+  }
 }
 
-console.log(passed);
-*/
+response = alphabets.find(findC);
+console.log(response);
 
-// Above code can be replaced by:
+response = alphabets.find(findY);
+console.log(response);
 
-const marks = 75;
-let passed = marks > 40 ? true : false;
-console.log(passed);
+// find (2)
+response = users.find(findAmina);
+
+function findAmina(value) {
+  if (value.name === 'Amina') {
+    return true;
+  }
+}
+
+// map (2)
+newArray = users.map(getName);
+
+function getName(value) {
+  return value.name;
+}
+console.log(newArray);
