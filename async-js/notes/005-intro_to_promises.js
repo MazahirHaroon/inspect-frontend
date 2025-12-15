@@ -1,70 +1,100 @@
-/* 
-Using .then() and .catch()
+/* ============================================================
+   PROMISE CREATION + THEN / CATCH (WITH NOTES)
+   ============================================================ */
 
-1. Call the .then() method on a Promise that you want to handle.
+/*
+Notes for Creating and Using a Promise
 
-2. Inside .then(), provide a function that will run when the Promise 
-  resolves successfully.
+1. A Promise is created using the `new Promise()` constructor.
 
-3. This success function automatically receives the resolved value 
-  from the Promise.
+2. The Promise constructor takes a function with two parameters
+   (`a` and `b` in this example).
 
-4. If the Promise is rejected, .then() will not run — instead, .catch() will 
-   handle the error.
+3. The function passed to `new Promise()` runs immediately
+   when the Promise is created.
 
-5. Call .catch() after .then() and pass a function that will run 
-   when the Promise is rejected.
+4. Calling `a(value)` means the Promise is resolved successfully
+   with that value.
 
-6. The function inside .catch() automatically receives the error 
-   value from the Promise.
+5. Calling `b(error)` means the Promise is rejected
+   with an error value.
 
-7. This separation allows cleaner code, where successful and failed outcomes are handled in
-    two clearly defined steps.
+6. A Promise can be resolved or rejected only once.
 
-- .then() runs when the Promise resolves successfully.
-- .catch() runs when the Promise is rejected.
+7. In this example, since `1 === 1` is true,
+   `a('Mazahir')` is called and the Promise is resolved.
 */
 
 function getUser() {
   return new Promise((a, b) => {
-    const number = 1;
-
-    if (number === 1) {
-      a('Success');
+    if (1 === 1) {
+      a('Mazahir');
     } else {
-      b('Error: Something went wrong');
+      b('Something went wrong');
     }
   });
 }
-
-getUser()
-  .then((x) => {
-    console.log('Resolved:', x);
-  })
-  .catch((y) => {
-    console.log('Rejected:', y);
-  });
 
 /*
-// With Proper parameter/variable names  
+Notes for Execution Flow
 
-function getUser() {
-  return new Promise((resolve, reject) => {
-    const number = 1;
+8. `console.log('start')` runs first because it is synchronous code.
 
-    if (number === 1) {
-      resolve('Success');
-    } else {
-      reject('Error: Something went wrong');
-    }
-  });
-}
+9. `getUser()` is called next, which immediately creates a Promise.
 
-getUser()
-  .then((result) => {
-    console.log('Resolved:', result);
+10. Even though `a('Mazahir')` is called immediately,
+    the `.then()` callback does NOT run right away.
+
+11. Promise callbacks (`.then()` / `.catch()`) run asynchronously,
+    after the current call stack is finished.
+
+12. `console.log('end')` runs before `.then()` for this reason.
+*/
+
+console.log('start');
+
+const response = getUser()
+  .then((c) => {
+    /*
+    Notes for .then()
+
+    13. The anonymous function inside `.then()` runs
+        only when the Promise is resolved.
+
+    14. This function automatically receives the value
+        passed to `a()`.
+
+    15. In this case, `c` receives `'Mazahir'`.
+    */
+    console.log('User:', c);
   })
-  .catch((error) => {
-    console.log('Rejected:', error);
+  .catch((c) => {
+    /*
+    Notes for .catch()
+
+    16. The anonymous function inside `.catch()` runs
+        only when the Promise is rejected.
+
+    17. This function automatically receives the value
+        passed to `b()`.
+
+    18. Since the Promise is resolved here,
+        this block will NOT run.
+    */
+    console.log('Error:', c);
   });
+
+console.log('end');
+
+/*
+Expected Output Order
+
+start
+end
+User: Mazahir
+
+
+- Creating a Promise is synchronous,
+- but handling its result 
+  with `.then()` or `.catch()` is asynchronous.
 */
