@@ -1,72 +1,111 @@
+/* ============================================================
+   PROMISE → ASYNC / AWAIT (WITH NOTES)
+   ============================================================ */
+
 /*
-// Using async/await
+Notes for Creating a Promise
 
-1. Mark a function as `async` to allow the use of the `await` keyword inside it.
+1. A Promise is created using the `new Promise()` constructor.
 
-2. When you use `await` on a Promise, JavaScript pauses the function until the 
-   Promise settles.
+2. The Promise constructor takes a function with two parameters
+   (`a` and `b` in this example).
 
-3. If the Promise resolves successfully, `await` returns the resolved value 
-   and execution continues.
+3. The function passed to `new Promise()` runs immediately
+   when the Promise is created.
 
-4. If the Promise is rejected, an error is thrown at the point of the `await`.
+4. Calling `a(value)` resolves the Promise successfully
+   with that value.
 
-5. Use a `try...catch` block to handle both outcomes:
+5. Calling `b(error)` rejects the Promise
+   with an error value.
 
-   * The `try` block runs when the Promise resolves.
-   * The `catch` block runs when the Promise is rejected.
-
-6. This approach makes asynchronous code look and behave more like synchronous code, 
-   improving readability and flow.
-
+6. A Promise can be resolved or rejected only once.
 */
-
-async function main() {
-  try {
-    const response = await getUser();
-    console.log('Resolved:', response);
-  } catch (error) {
-    console.log('Rejected:', error);
-  }
-}
 
 function getUser() {
   return new Promise((a, b) => {
-    const number = 1;
-
-    if (number === 1) {
-      a('Success');
+    if (1 === 1) {
+      a('Mazahir');
     } else {
-      b('Error: Something went wrong');
+      b('Something went wrong');
     }
   });
 }
 
-main();
-
 /*
-// With Proper parameter/variable names  
+Notes for async / await
+
+7. An `async` function always returns a Promise.
+
+8. `await` pauses the execution of the async function
+   until the Promise is settled (resolved or rejected).
+
+9. `await` does NOT block JavaScript —
+   it only pauses the async function itself.
+*/
 
 async function main() {
+  /*
+  Notes for Execution Flow
+
+  10. Code inside this function runs synchronously
+      until it reaches the first `await`.
+
+  11. When `await getUser()` is reached:
+      - JavaScript exits this function temporarily
+      - waits for the Promise to settle
+  */
+
   try {
-    const response = await getUser();
-    console.log('Resolved:', response);
-  } catch (error) {
-    console.log('Rejected:', error);
+    const c = await getUser();
+    /*
+    Notes for await success
+
+    12. If the Promise is resolved,
+        `await` returns the resolved value.
+
+    13. The value passed to `a()` is assigned to `c`.
+
+    14. In this case, `c` receives `'Mazahir'`.
+    */
+    console.log('User:', c);
+  } catch (c) {
+    /*
+    Notes for await error handling
+
+    15. If the Promise is rejected,
+        control jumps directly to `catch`.
+
+    16. The value passed to `b()` is received here.
+
+    17. This `catch` block is equivalent to `.catch()` in Promise chaining.
+    */
+    console.log('Error:', c);
   }
 }
 
-function getUser() {
-  return new Promise((resolve, reject) => {
-    const number = 1;
+/*
+Notes outside the async function
 
-    if (number === 1) {
-      resolve('Success');
-    } else {
-      reject('Error: Something went wrong');
-    }
-  });
-}
+18. `console.log('start')` runs first
+    because it is synchronous code.
 
+19. Calling `main()` starts the async function,
+    but does not block the rest of the program.
+*/
+
+console.log('start');
 main();
+console.log('end');
+
+/*
+Expected Output Order
+
+start
+end
+User: Mazahir
+
+Key Teaching Line:
+`async / await` is just cleaner syntax on top of Promises —
+the underlying behavior does not change.
 */
