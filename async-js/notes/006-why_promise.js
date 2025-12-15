@@ -1,3 +1,4 @@
+// compare this with the code in callback_hell.js
 authenticateUser()
   .then(fetchUserProfile)
   .then(fetchUserNotifications)
