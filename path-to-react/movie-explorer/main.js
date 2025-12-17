@@ -1,5 +1,24 @@
 import { movieList } from './db.js';
 
+const movieDiv1 = document.querySelector('#movie1');
+const movieDiv2 = document.querySelector('#movie2');
+
+const p = document.createElement('p');
+
+p.textContent = `${movieList[7].title} (${movieList[7].year}) - Rating: ${movieList[7].imdbRating}`;
+
+movieDiv1.appendChild(p);
+
+// ---------------------------
+// Using innerHTML
+// (Please read about innerHTML issues in daily notes Day 6)
+// ---------------------------
+movieDiv2.innerHTML = `
+  <p>
+    ${movieList[27].title} (${movieList[27].year}) - Rating: ${movieList[27].imdbRating}
+  </p>
+`;
+
 const movies = [
   {
     title: 'Arrival',
