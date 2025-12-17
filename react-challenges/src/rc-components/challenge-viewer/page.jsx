@@ -20,7 +20,7 @@ const ChallengePage = ({
 
       <section className='question'>
         <h4>Question</h4>
-        <p>{meta.question || 'No question text provided in meta.'}</p>
+        <p>{meta.question || 'No question text provided.'}</p>
       </section>
 
       <section className='code'>
@@ -51,9 +51,10 @@ const ChallengePage = ({
 
       <section className='solution'>
         <h4>Solution / Explanation</h4>
-        <div className='solution-text'>
-          {meta.solution || 'No solution text provided in meta.'}
-        </div>
+
+        <pre className='solution-text'>
+          <code>{meta.solution || 'No solution provided'}</code>
+        </pre>
       </section>
     </div>
   );
