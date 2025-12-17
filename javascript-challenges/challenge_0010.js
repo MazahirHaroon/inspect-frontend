@@ -7,7 +7,7 @@ in ascending order.
 */
 
 function uniqueSorted(arr) {
-  return Array.from(new Set(arr)).sort((a, b) => a - b);
+  return [...new Set(arr)].sort((a, b) => a - b);
 }
 console.log(uniqueSorted([3, 1, 2, 13, 11, 3, 2, 11, 4, 7, 7, 7]));
 console.log(uniqueSorted([]));
