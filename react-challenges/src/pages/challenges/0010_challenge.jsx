@@ -2,10 +2,10 @@ export const meta = {
   title: 'Memo + useCallback render question',
   question: `What does this component log to the console, and how many times will Child render (assume parent mounts once and no external rerenders happen)?`,
   solution: `
-  Console prints: "Button rendered". Button renders 1 time.
-  The Button is memoized with React.memo and the handler is wrapped in useCallback with
-  empty deps; the function reference does not change, so props are stable and Button does
-  not re-render on parent state updates.
+  - Console prints: "Button rendered". Button renders 1 time.
+  - The Button is memoized with React.memo and the handler is wrapped in useCallback with
+    empty deps; the function reference does not change, so props are stable and Button does
+    not re-render on parent state updates.
   `,
 };
 
