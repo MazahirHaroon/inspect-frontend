@@ -317,6 +317,38 @@ p {
   border-radius: 10%;
 }
 
+.result-section {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.preview,
+.solution {
+  flex: 1;
+}
+
+.solution > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.reveal-btn {
+  background: transparent;
+  border: 1px solid var(--border-subtle, #444);
+  color: inherit;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.reveal-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
 /* -------------------------
    Code block
    ------------------------- */
@@ -379,7 +411,6 @@ p {
    Solution / explanation
    ------------------------- */
 .solution-text {
-  margin-top: 8px;
   color: var(--text);
   background: linear-gradient(
     180deg,
@@ -387,7 +418,6 @@ p {
     rgba(255, 255, 255, 0.01)
   );
   padding: 12px;
-  border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.03);
 }
 

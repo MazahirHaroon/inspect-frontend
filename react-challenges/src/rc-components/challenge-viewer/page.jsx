@@ -1,4 +1,5 @@
-import { Suspense } from 'react';
+import Solution from './Solution';
+import Preview from './Preview';
 
 const ChallengePage = ({
   active,
@@ -48,28 +49,14 @@ const ChallengePage = ({
           </pre>
         )}
       </section>
-
-      <section className='preview'>
-        <h4>Preview</h4>
-
-        {!loading && !error && ActiveComponent && (
-          <Suspense fallback={<div>Rendering preview…</div>}>
-            <div className='preview-box'>
-              <ActiveComponent />
-            </div>
-          </Suspense>
-        )}
-
-        {loading && <div className='status'>Loading preview…</div>}
-      </section>
-
-      <section className='solution'>
-        <h4>Solution / Explanation</h4>
-
-        <pre className='solution-text'>
-          <code>{meta.solution || 'No solution provided'}</code>
-        </pre>
-      </section>
+      <div className='result-section'>
+        <Preview
+          loading={loading}
+          error={error}
+          ActiveComponent={ActiveComponent}
+        />
+        <Solution solution={meta.solution} />
+      </div>
     </div>
   );
 };
