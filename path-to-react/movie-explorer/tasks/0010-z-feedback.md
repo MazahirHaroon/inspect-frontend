@@ -86,7 +86,7 @@ else if (movie.imdbRating > 7 && movie.imdbRating < 8.5)
 
 In an `if / else if / else` chain, **only one block runs**:
 
-- If the first `if` condition passes, **none of the `else if` or `else` blocks will run**
+- If the first `if` condition passes, the `else if` and `else` blocks will **not** run
 - If the first `if` fails, execution moves to the next condition
 
 So when you already have:
@@ -95,7 +95,7 @@ So when you already have:
 if (movie.imdbRating > 8.5) { ... }
 ```
 
-and execution reaches the `else if`, the check `movie.imdbRating < 8.5` is **already guaranteed** to be true. Adding it again does not change the behavior in any way.
+and execution reaches the `else if`, the check `movie.imdbRating < 8.5` is **already guaranteed** to be true. Adding it again does not change the behavior.
 
 ### Why This Matters
 
@@ -263,9 +263,28 @@ Inconsistent casing:
 
 ---
 
+## 9. Use Correct Data Types for Comparisons
+
+**Tag:** Logic · Data Handling
+
+**Associated Tasks:** Task 1, Task 3
+
+If a value is meant to be compared numerically, it should be stored as a **number**, not a string.
+
+```js
+const imdbRating: 9.2; // correct
+const imdbRating: "9.2"; // wrong
+```
+
+Using strings for numbers can lead to unexpected behavior during comparisons.
+
+---
+
 ## Debug Checklist (When Your Code Doesn’t Work)
 
-Before assuming your logic is wrong, check the following **in order**:
+**Tag:** Debugging
+
+Before assuming your logic is wrong, check the following:
 
 1. **Property names**
 
