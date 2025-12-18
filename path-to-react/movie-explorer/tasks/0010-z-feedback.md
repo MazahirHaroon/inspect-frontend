@@ -6,8 +6,8 @@ This document highlights **common improvements and best practices** observed whi
 
 ## 1. Designing Better Functions
 
-**Associated Tasks:** Task 2, Task 3, Task 5, Task 6
-**Tag:** Design
+- **Associated Tasks:** Task 2, Task 3, Task 5, Task 6
+- **Tag:** Design
 
 A common pattern during practice is passing **indexes** into functions instead of the actual data.
 
@@ -42,8 +42,8 @@ This function now:
 
 ## 2. Avoid Repeating the Same Expression
 
-**Associated Tasks:** Task 3, Task 6
-**Tag:** Readability
+- **Associated Tasks:** Task 3, Task 6
+- **Tag:** Readability
 
 If you find yourself writing the same expression multiple times, it hurts readability and makes code harder to maintain.
 
@@ -75,8 +75,8 @@ function printRatingMessage(movie) {
 
 ## 3. Avoid Extra Conditions That Don’t Add Value
 
-**Associated Tasks:** Task 3
-**Tag:** Logic · Readability
+- **Associated Tasks:** Task 3
+- **Tag:** Logic · Readability
 
 Example of an unnecessary condition:
 
@@ -114,8 +114,8 @@ and execution reaches the `else if`, the check `movie.imdbRating < 8.5` is **alr
 
 ## 4. Use Clear and Descriptive Variable Names
 
-**Associated Tasks:** Task 4
-**Tag:** Readability
+- **Associated Tasks:** Task 4
+- **Tag:** Readability
 
 Avoid vague names that don’t explain what the data represents like obj, array , a, abc, xyz etc;
 
@@ -158,8 +158,8 @@ This is called **object property shorthand** and is the preferred, cleaner way t
 
 ## 5. Parameter Names Should Reflect What Is Passed
 
-**Associated Tasks:** Task 5
-**Tag:** Readability · Design
+- **Associated Tasks:** Task 5
+- **Tag:** Readability · Design
 
 ```js
 function checkGenre(movies, genreToCheck) {
@@ -183,8 +183,8 @@ This function receives a **single movie**, not multiple movies. Naming the param
 
 ## 6. Prefer `===` Over `==`
 
-**Associated Tasks:** Task 6
-**Tag:** Logic
+- **Associated Tasks:** Task 6
+- **Tag:** Logic
 
 Always prefer strict equality to avoid unexpected type coercion.
 
@@ -202,8 +202,8 @@ This makes comparisons predictable and safer.
 
 ## 7. Reduce Repetition in Conditional Logic
 
-**Associated Tasks:** Task 3, Task 6
-**Tag:** Logic · Readability
+- **Associated Tasks:** Task 3, Task 6
+- **Tag:** Logic · Readability
 
 When conditional branches repeat the same structure, the code becomes harder to read.
 
@@ -231,8 +231,8 @@ function searchMovie(title, movies) {
 
 ## 8. Naming Convention: Always Use camelCase
 
-**Associated Tasks:** All
-**Tag:** Readability · Consistency
+- **Associated Tasks:** All
+- **Tag:** Readability · Consistency
 
 JavaScript follows **camelCase** naming by convention.
 
@@ -265,9 +265,8 @@ Inconsistent casing:
 
 ## 9. Use Correct Data Types for Comparisons
 
-**Tag:** Logic · Data Handling
-
-**Associated Tasks:** Task 1, Task 3
+- **Associated Tasks:** Task 1, Task 3
+- **Tag:** Logic · Data Handling
 
 If a value is meant to be compared numerically, it should be stored as a **number**, not a string.
 
@@ -282,7 +281,7 @@ Using strings for numbers can lead to unexpected behavior during comparisons.
 
 ## Debug Checklist (When Your Code Doesn’t Work)
 
-**Tag:** Debugging
+- **Tag:** Debugging
 
 Before assuming your logic is wrong, check the following:
 
