@@ -13,32 +13,11 @@ export const getAllMetadata = () => {
   }));
 };
 
-const stripMetaFromSource = (source) => {
-  if (!source) return '';
-
-  return source
-    .replace(/export\s+const\s+meta\s*=\s*{[\s\S]*?};\s*/m, '')
-    .trim();
-};
-
 export const loadChallenge = async (fileName) => {
-  const loader = modules[fileName];
-  const rawLoader = rawModules[fileName];
-
-  if (!loader) {
-    throw new Error(`Challenge file not found: ${fileName}`);
-  }
-
-  const [mod, raw] = await Promise.all([loader(), rawLoader()]);
-
-  const Comp = mod && (mod.default || mod);
-  if (!Comp) throw new Error('Module has no default export.');
-
-  const meta = mod.meta || {};
-
+  const [mod] = await Promise.all([modules[fileName]()]);
   return {
-    Component: Comp,
-    code: stripMetaFromSource(raw),
-    meta,
+    Component: mod.default,
+    meta: mod.meta || {},
+    code: mod.starterCode || '',
   };
 };
