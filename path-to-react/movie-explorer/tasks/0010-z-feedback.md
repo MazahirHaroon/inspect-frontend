@@ -7,6 +7,7 @@ This document highlights **common improvements and best practices** observed whi
 ## 1. Designing Better Functions
 
 **Associated Tasks:** Task 2, Task 3, Task 5, Task 6
+**Tag:** Design
 
 A common pattern during practice is passing **indexes** into functions instead of the actual data.
 
@@ -42,6 +43,7 @@ This function now:
 ## 2. Avoid Repeating the Same Expression
 
 **Associated Tasks:** Task 3, Task 6
+**Tag:** Readability
 
 If you find yourself writing the same expression multiple times, it hurts readability and makes code harder to maintain.
 
@@ -71,11 +73,51 @@ function printRatingMessage(movie) {
 
 ---
 
-## 3. Use Clear and Descriptive Variable Names
+## 3. Avoid Extra Conditions That Don’t Add Value
+
+**Associated Tasks:** Task 3
+**Tag:** Logic · Readability
+
+Example of an unnecessary condition:
+
+```js
+else if (movie.imdbRating > 7 && movie.imdbRating < 8.5)
+```
+
+In an `if / else if / else` chain, **only one block runs**:
+
+- If the first `if` condition passes, **none of the `else if` or `else` blocks will run**
+- If the first `if` fails, execution moves to the next condition
+
+So when you already have:
+
+```js
+if (movie.imdbRating > 8.5) { ... }
+```
+
+and execution reaches the `else if`, the check `movie.imdbRating < 8.5` is **already guaranteed** to be true. Adding it again does not change the behavior in any way.
+
+### Why This Matters
+
+- In small files, this may look harmless
+- In larger codebases, extra conditions:
+
+  - Slow down understanding
+  - Create confusion during debugging
+  - Increase the chance of mistakes when logic changes later
+
+### Learning point
+
+> Write conditions that say exactly what you mean — no more and no less.
+
+---
+
+## 4. Use Clear and Descriptive Variable Names
 
 **Associated Tasks:** Task 4
+**Tag:** Readability
 
-Avoid vague names that don’t explain what the data represents.
+Avoid vague names that don’t explain what the data represents like obj, array , a, abc, xyz etc;
 
 ### Better Example
 
@@ -94,7 +136,7 @@ function addMovie(title, year, imdbRating, genre) {
 
 Clear naming reduces confusion and removes the need for extra comments.
 
-### Extra Tip
+### Extra Tip: Object Shorthand
 
 When the **property name and variable name are the same**, there is no need to repeat it.
 
@@ -104,7 +146,7 @@ Instead of:
 genre: genre;
 ```
 
-You can simply write:
+You can write:
 
 ```js
 genre;
@@ -114,9 +156,35 @@ This is called **object property shorthand** and is the preferred, cleaner way t
 
 ---
 
-## 4. Prefer `===` Over `==`
+## 5. Parameter Names Should Reflect What Is Passed
+
+**Associated Tasks:** Task 5
+**Tag:** Readability · Design
+
+```js
+function checkGenre(movies, genreToCheck) {
+```
+
+This function receives a **single movie**, not multiple movies. Naming the parameter `movies` is misleading.
+
+### Why This Matters
+
+- In a larger codebase, misleading names:
+
+  - Cause incorrect assumptions
+  - Lead to wrong usage of functions
+  - Make debugging harder during development
+
+**Learning point:**
+
+> Parameter names should describe what the value represents, not where it came from.
+
+---
+
+## 6. Prefer `===` Over `==`
 
 **Associated Tasks:** Task 6
+**Tag:** Logic
 
 Always prefer strict equality to avoid unexpected type coercion.
 
@@ -132,9 +200,10 @@ This makes comparisons predictable and safer.
 
 ---
 
-## 5. Reduce Repetition in Conditional Logic
+## 7. Reduce Repetition in Conditional Logic
 
 **Associated Tasks:** Task 3, Task 6
+**Tag:** Logic · Readability
 
 When conditional branches repeat the same structure, the code becomes harder to read.
 
@@ -160,12 +229,79 @@ function searchMovie(title, movies) {
 
 ---
 
+## 8. Naming Convention: Always Use camelCase
+
+**Associated Tasks:** All
+**Tag:** Readability · Consistency
+
+JavaScript follows **camelCase** naming by convention.
+
+Correct:
+
+```js
+⁠⁠rollNumber
+marks
+⁠⁠studentDetails
+⁠⁠statusUpdate
+```
+
+Avoid:
+
+```js
+
+⁠⁠rollnumber
+⁠Marks
+⁠⁠StudentDetails
+⁠⁠Statusupdate
+```
+
+Inconsistent casing:
+
+- Breaks conditions silently
+- Makes bugs harder to spot
+- Creates confusion in team environments
+
+---
+
+## Debug Checklist (When Your Code Doesn’t Work)
+
+Before assuming your logic is wrong, check the following **in order**:
+
+1. **Property names**
+
+   - Correct spelling?
+   - Consistent casing?
+
+2. **Data types**
+
+   - String ↔ string
+   - Number ↔ number
+   - Object ↔ object
+
+3. **Function inputs**
+
+   - Is the function receiving what it expects (object vs index)?
+
+4. **Conditions**
+
+   - Are any checks redundant?
+   - Can the condition ever become `true`?
+
+5. **Variable and parameter names**
+
+   - Do the names match what the value represents?
+
+Most bugs in beginner code come from **small mismatches**, not complex logic.
+
+---
+
 ## Final Takeaways
 
 - Pass objects to functions, not indexes
 - Reduce repetition
 - Write reusable, single-purpose functions
 - Use clear and descriptive naming
+- Follow camelCase consistently
 - Prefer `===` over `==`
 
 These fundamentals may feel small now, but they make a **huge difference** as codebases grow and when moving into frameworks like React.
