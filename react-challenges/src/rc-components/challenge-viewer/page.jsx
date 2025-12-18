@@ -23,6 +23,20 @@ const ChallengePage = ({
         <p>{meta.question || 'No question text provided.'}</p>
       </section>
 
+      <section className='type'>
+        <h4>Type:</h4>
+        <p>{meta.type || 'No type provided.'}</p>
+      </section>
+
+      <section className='tags'>
+        <h4>
+          Tags:
+          {meta && meta.tags
+            ? meta.tags.map((tag) => <span className='tag'>{tag}</span>)
+            : 'No tags provided.'}
+        </h4>
+      </section>
+
       <section className='code'>
         <h4>Code</h4>
         {loading && <div className='status'>Loading code & preview…</div>}

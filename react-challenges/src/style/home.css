@@ -290,6 +290,7 @@ a {
 
 /* Sections */
 .question,
+.type-tags,
 .code,
 .preview,
 .solution {
@@ -300,6 +301,20 @@ a {
   color: var(--text);
   line-height: 1.5;
   font-size: 15px;
+}
+
+.type h4,
+p {
+  display: inline-block;
+  margin-right: 0.2em;
+}
+
+.tag {
+  background-color: gray;
+  color: white;
+  padding: 0.2em;
+  margin: 0.2em;
+  border-radius: 10%;
 }
 
 /* -------------------------
