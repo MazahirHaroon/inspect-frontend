@@ -13,6 +13,14 @@ export const getAllMetadata = () => {
   }));
 };
 
+const stripMetaFromSource = (source) => {
+  if (!source) return '';
+
+  return source
+    .replace(/export\s+const\s+meta\s*=\s*{[\s\S]*?};\s*/m, '')
+    .trim();
+};
+
 export const loadChallenge = async (fileName) => {
   const loader = modules[fileName];
   const rawLoader = rawModules[fileName];
@@ -30,7 +38,7 @@ export const loadChallenge = async (fileName) => {
 
   return {
     Component: Comp,
-    code: raw || '',
+    code: stripMetaFromSource(raw),
     meta,
   };
 };
