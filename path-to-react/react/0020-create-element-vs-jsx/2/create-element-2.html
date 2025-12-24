@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>React without JSX</title>
+    </head>
+
+    <body>
+        <div id="app"></div>
+
+        <!-- React -->
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+        <script>
+            const { createElement, useState } = React;
+            const { createRoot } = ReactDOM;
+
+            function App() {
+                const [count, setCount] = useState(0);
+
+                return createElement(
+                    "div",
+                    null,
+                    createElement("h1", null, "Hello React (no JSX)"),
+                    createElement(
+                        "button",
+                        {
+                            onClick: () => setCount(count + 1),
+                        },
+                        `Clicked ${count} times`
+                    )
+                );
+            }
+
+            const container = document.getElementById("app");
+            const root = createRoot(container);
+
+            root.render(createElement(App));
+        </script>
+    </body>
+
+</html>

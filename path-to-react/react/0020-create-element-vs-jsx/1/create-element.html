@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>React without JSX</title>
+    </head>
+
+    <body>
+        <div id="app"></div>
+
+        <!-- React -->
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+        <script>
+            const { createElement } = React;
+            const { createRoot } = ReactDOM;
+
+            // 1. Get the container
+            const rootElement = document.getElementById('root');
+
+            // 2. Create a root
+            const root = createRoot(rootElement);
+
+            // 3. Create a React element
+            const headingElement = React.createElement('h1', null, 'Hello React (no JSX)');
+
+            // 4. Render it
+            root.render(headingElement);
+
+        </script>
+    </body>
+
+</html>
