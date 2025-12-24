@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Three Buttons (with React)</title>
+    </head>
+
+    <body>
+        <div id="root"></div>
+
+        <!-- React -->
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <script type="text/babel">
+            function App() {
+                const [message, setMessage] = React.useState("Click a button");
+
+                return (
+                    <div>
+                        <p>{message}</p>
+
+                        <button onClick={() => setMessage("Button 1 clicked")}>
+                            Button 1
+                        </button>
+
+                        <button onClick={() => setMessage("Button 2 clicked")}>
+                            Button 2
+                        </button>
+
+                        <button onClick={() => setMessage("Button 3 clicked")}>
+                            Button 3
+                        </button>
+                    </div>
+                );
+            }
+            const rootElement = document.getElementById("root");
+            const root = ReactDOM.createRoot(rootElement);
+            root.render(<App />);
+        </script>
+
+
+    </body>
+
+</html>

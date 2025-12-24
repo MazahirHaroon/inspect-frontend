@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Three Buttons (just JS)</title>
+    </head>
+
+    <body>
+        <div id="root"></div>
+
+        <script>
+            const app = document.getElementById("root");
+
+            app.innerHTML = `
+                <div>
+                <p id="output">Click a button</p>
+
+                <button id="btn1">Button 1</button>
+                <button id="btn2">Button 2</button>
+                <button id="btn3">Button 3</button>
+                </div>
+            `;
+
+            const outputEl = document.getElementById("output");
+            const btn1 = document.getElementById("btn1");
+            const btn2 = document.getElementById("btn2");
+            const btn3 = document.getElementById("btn3");
+
+            btn1.addEventListener("click", () => {
+                outputEl.innerText = "Button 1 clicked";
+            });
+
+            btn2.addEventListener("click", () => {
+                outputEl.innerText = "Button 2 clicked";
+            });
+
+            btn3.addEventListener("click", () => {
+                outputEl.innerText = "Button 3 clicked";
+            });
+        </script>
+
+    </body>
+
+</html>

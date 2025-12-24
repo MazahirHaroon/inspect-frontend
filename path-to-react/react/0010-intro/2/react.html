@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Three Buttons (with React)</title>
+    </head>
+
+    <body>
+        <div id="root"></div>
+
+        <!-- React -->
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <script type="text/babel">
+            function App() {
+                const [message, setMessage] = React.useState("Click a button");
+
+                const [button1Count, setButton1Count] = React.useState(0);
+                const [button2Count, setButton2Count] = React.useState(0);
+                const [button3Count, setButton3Count] = React.useState(0);
+
+                return (
+                    <div>
+                        <p>{message}</p>
+
+                        <button
+                            onClick={() => {
+                                setButton1Count(button1Count + 1);
+                                setMessage("Button 1 clicked");
+                            }}
+                        >
+                            Button 1 ({button1Count})
+                        </button>
+
+                        <button
+                            onClick={() => {
+                                setButton2Count(button2Count + 1);
+                                setMessage("Button 2 clicked");
+                            }}
+                        >
+                            Button 2 ({button2Count})
+                        </button>
+
+                        <button
+                            onClick={() => {
+                                setButton3Count(button3Count + 1);
+                                setMessage("Button 3 clicked");
+                            }}
+                        >
+                            Button 3 ({button3Count})
+                        </button>
+                    </div>
+                );
+            }
+
+            const root = ReactDOM.createRoot(document.getElementById("root"));
+            root.render(<App />);
+        </script>
+    </body>
+
+</html>

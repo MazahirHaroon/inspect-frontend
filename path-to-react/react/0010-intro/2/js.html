@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three Buttons (just JS)</title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script>
+      const app = document.getElementById("root");
+
+      app.innerHTML = `
+              <div>
+                <p id="output">Click a button</p>
+
+                <button id="btn1">
+                  Button 1 (<span id="count1">0</span>)
+                </button>
+
+                <button id="btn2">
+                  Button 2 (<span id="count2">0</span>)
+                </button>
+
+                <button id="btn3">
+                  Button 3 (<span id="count3">0</span>)
+                </button>
+              </div>
+            `;
+
+      const outputEl = document.getElementById("output");
+
+      const btn1 = document.getElementById("btn1");
+      const btn2 = document.getElementById("btn2");
+      const btn3 = document.getElementById("btn3");
+
+      const count1El = document.getElementById("count1");
+      const count2El = document.getElementById("count2");
+      const count3El = document.getElementById("count3");
+
+      let count1 = 0;
+      let count2 = 0;
+      let count3 = 0;
+
+      btn1.addEventListener("click", () => {
+        count1++;
+        count1El.textContent = count1;
+        outputEl.textContent = "Button 1 clicked";
+      });
+
+      btn2.addEventListener("click", () => {
+        count2++;
+        count2El.textContent = count2;
+        outputEl.textContent = "Button 2 clicked";
+      });
+
+      btn3.addEventListener("click", () => {
+        count3++;
+        count3El.textContent = count3;
+        outputEl.textContent = "Button 3 clicked";
+      });
+    </script>
+  </body>
+
+</html>
