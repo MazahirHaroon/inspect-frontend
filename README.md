@@ -3,8 +3,7 @@
 Welcome to the **Inspect Frontend Learning Repository!**
 This repository contains the **daily code, class examples, and mini projects** from our live sessions and learner discussions.
 
-We focus on helping students **build strong foundations in JavaScript, HTML, and CSS**, the essential building blocks of modern frontend development.
-Every folder here connects directly to what we’ve discussed and built together during our calls.
+We focus on helping students **build strong foundations in JavaScript, HTML, and CSS**, the essential building blocks of modern frontend development. Every folder here connects directly to what we’ve discussed and built together during our calls.
 
 > 🟢 We’re just getting started!
 > For now, you’ll find only a few files as we’re actively adding new lessons each week.
@@ -14,7 +13,7 @@ Every folder here connects directly to what we’ve discussed and built together
 
 ## Repository Structure
 
-The repository is organised into dedicated folders for different learning paths and teaching formats:
+The repository is organized into dedicated folders for different learning paths and teaching formats:
 
 ---
 
@@ -68,7 +67,7 @@ export default function Challenge() {
 }
 ```
 
-### Running
+### Running the Project
 
 ```sh
 npm install
@@ -102,7 +101,6 @@ We also maintain a separate **YouTube video series**, where similar (but sometim
 This folder contains **learning-focused React performance examples and experiments**, mainly around **re-renders, composition patterns, and component structure**.
 
 <img width="1009" height="610" alt="React Performance Tips UI" src="https://github.com/user-attachments/assets/7b1be1e0-df96-45a7-8b0d-c792419affdf" />
-
 
 The lessons here are **not production utilities**, but small, intentional code samples created to understand _why_ React re-renders and _how_ better composition can help. Code may intentionally prioritize clarity over DRY principles.
 
@@ -151,7 +149,7 @@ Open the app and select a lesson from the top.
 
 The goal is to **see the problem first, then fix it by changing structure**, not by memorizing patterns.
 
-### Running
+### Running the Project
 
 ```sh
 npm run dev
@@ -164,11 +162,13 @@ npm run dev
 This folder focuses on **asynchronous JavaScript fundamentals**, explained through **progressive, numbered lesson files**.
 
 Each `.js` file contains:
+
 - explanatory **notes written as comments**
 - runnable **example code**
 - step-by-step reasoning about execution order
 
 The lessons cover topics such as:
+
 - `setTimeout` and the event loop
 - callbacks and callback hell
 - promises
@@ -229,16 +229,6 @@ Help learners intuitively understand how **objects store related data** and how 
 
 ---
 
-## How to Use This Repo
-
-1. Clone the repo:
-
-   ```bash
-   git clone https://github.com/<your-username>/inspect-frontend.git
-   ```
-
----
-
 ## 👨‍💻 Maintainer
 
 Inspect Frontend Community
@@ -246,5 +236,5 @@ Mentored by **Mazahir Haroon**
 📍 Kerala, India
 
 ```javascript
-console.log('Namaskaram from Inspect Frontend 👋');
+console.log("Namaskaram from Inspect Frontend 👋");
 ```
