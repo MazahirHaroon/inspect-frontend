@@ -159,6 +159,36 @@ npm run dev
 
 ---
 
+## `/async-js`
+
+This folder focuses on **asynchronous JavaScript fundamentals**, explained through **progressive, numbered lesson files**.
+
+Each `.js` file contains:
+- explanatory **notes written as comments**
+- runnable **example code**
+- step-by-step reasoning about execution order
+
+The lessons cover topics such as:
+- `setTimeout` and the event loop
+- callbacks and callback hell
+- promises
+- `async` / `await`
+- why each abstraction exists
+
+### How to use
+
+You can run and understand these lessons in two ways:
+
+- **In the browser**  
+  Connect any lesson file to an HTML file using a `<script>` tag and observe the output in the console.
+
+- **Using Node.js**  
+  Run individual files directly with Node to follow execution through logs and comments.
+
+The primary goal is to **read the comments alongside the code** and mentally trace how asynchronous execution works in JavaScript.
+
+---
+
 ### `/javascript_courses`
 
 This folder focuses on **core JavaScript concepts**, taught progressively day by day.
