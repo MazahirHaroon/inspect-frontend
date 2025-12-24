@@ -36,8 +36,7 @@ It is divided into three sub-folders:
 
 This folder contains an **interactive React Challenges Viewer**, a tool to practice React concepts through short, focused exercises.
 
-<img width="1239" height="657" alt="image" src="https://github.com/user-attachments/assets/40e1efc2-edd5-40e6-9dcf-e9f74d311329" />
-
+<img width="1239" height="657" alt="Interactive React Challenges Viewer UI" src="https://github.com/user-attachments/assets/40e1efc2-edd5-40e6-9dcf-e9f74d311329" />
 
 ### Each challenge includes:
 
@@ -91,11 +90,72 @@ The viewer also includes a **4-theme switcher** to customise the UI.
 
 We also maintain a separate **YouTube video series**, where similar (but sometimes broader) topics are explained in a structured, asynchronous way.
 
-[<img width="777" height="550" alt="image" src="https://github.com/user-attachments/assets/cafcd840-31e6-47f7-a23a-e0a72a7e5a13" />](https://www.youtube.com/playlist?list=PLPFRrbkGSYzqoFJT-B3_RSMWxA5r0XBDk)
-
+[<img width="777" height="550" alt="Mazahir Haroon's Youtube Channel" src="https://github.com/user-attachments/assets/cafcd840-31e6-47f7-a23a-e0a72a7e5a13" />](https://www.youtube.com/playlist?list=PLPFRrbkGSYzqoFJT-B3_RSMWxA5r0XBDk)
 
 **Watch the playlist here:**
 **[https://www.youtube.com/playlist?list=PLPFRrbkGSYzqoFJT-B3_RSMWxA5r0XBDk](https://www.youtube.com/playlist?list=PLPFRrbkGSYzqoFJT-B3_RSMWxA5r0XBDk)**
+
+---
+
+## `/react-performance-tips`
+
+This folder contains **learning-focused React performance examples and experiments**, mainly around **re-renders, composition patterns, and component structure**.
+
+<img width="1009" height="610" alt="React Performance Tips UI" src="https://github.com/user-attachments/assets/7b1be1e0-df96-45a7-8b0d-c792419affdf" />
+
+
+The lessons here are **not production utilities**, but small, intentional code samples created to understand _why_ React re-renders and _how_ better composition can help. Code may intentionally prioritize clarity over DRY principles.
+
+### Inspiration
+
+The material in this folder is **inspired by the work of Nadia Makarevich**
+and the **Developer Way** YouTube channel and blog.
+
+Developer Way provides deep, practical insights into React internals,
+especially around re-render behavior and composition-based optimizations.
+
+**References include (but are not limited to):**
+
+- [https://www.youtube.com/@DeveloperWay](https://www.youtube.com/@DeveloperWay)
+- [https://www.developerway.com/posts/react-re-renders-guide](https://www.developerway.com/posts/react-re-renders-guide)
+
+### Lesson patterns included
+
+- **example**  
+  A baseline example to observe default re-render behavior.
+
+- **move-state-down**  
+  Demonstrates how moving state closer to where it’s used reduces re-renders.
+
+- **component-as-children-prop**  
+  Shows how passing components as `children` can prevent parent re-renders
+  from affecting expensive child components.
+
+- **component-as-prop**  
+  Demonstrates passing components as props and how it affects element identity
+  and re-render behavior.
+
+### How to use these lessons
+
+Each lesson **shows a less optimal implementation by default**, which usually causes **extra or unnecessary re-renders**.
+
+Open the app and select a lesson from the top.
+
+**To learn:**
+
+- Observe the current (slow) behavior
+- Open the lesson file
+- Comment the current code
+- Uncomment the improved version
+- Reload and compare the render behavior
+
+The goal is to **see the problem first, then fix it by changing structure**, not by memorizing patterns.
+
+### Running
+
+```sh
+npm run dev
+```
 
 ---
 
