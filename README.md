@@ -17,7 +17,7 @@ The repository is organized into dedicated folders for different learning paths 
 
 ---
 
-## `/pathToReact`
+## [/pathToReact](https://github.com/MazahirHaroon/inspect-frontend/tree/main/path-to-react)
 
 This folder contains the material specifically created to help learners move from **JavaScript foundations → React development** efficiently.
 It is divided into three sub-folders:
@@ -31,7 +31,7 @@ It is divided into three sub-folders:
 
 ---
 
-## `/react-challenges`
+## [/react-challenges](https://github.com/MazahirHaroon/inspect-frontend/tree/main/react-challenges)
 
 This folder contains an **interactive React Challenges Viewer**, a tool to practice React concepts through short, focused exercises.
 
@@ -85,7 +85,7 @@ The viewer also includes a **4-theme switcher** to customise the UI.
 
 ---
 
-### YouTube Learning Series
+### [YouTube Learning Series](https://www.youtube.com/playlist?list=PLPFRrbkGSYzqoFJT-B3_RSMWxA5r0XBDk)
 
 We also maintain a separate **YouTube video series**, where similar (but sometimes broader) topics are explained in a structured, asynchronous way.
 
@@ -96,7 +96,7 @@ We also maintain a separate **YouTube video series**, where similar (but sometim
 
 ---
 
-## `/react-performance-tips`
+## [/react-performance-tips](https://github.com/MazahirHaroon/inspect-frontend/tree/main/react-performance-tips)
 
 This folder contains **learning-focused React performance examples and experiments**, mainly around **re-renders, composition patterns, and component structure**.
 
@@ -157,7 +157,7 @@ npm run dev
 
 ---
 
-## `/async-js`
+## [/async-js](https://github.com/MazahirHaroon/inspect-frontend/tree/main/async-js)
 
 This folder focuses on **asynchronous JavaScript fundamentals**, explained through **progressive, numbered lesson files**.
 
@@ -189,7 +189,7 @@ The primary goal is to **read the comments alongside the code** and mentally tra
 
 ---
 
-### `/javascript_courses`
+### [/javascript_courses](https://github.com/MazahirHaroon/inspect-frontend/tree/main/javascript-courses)
 
 This folder focuses on **core JavaScript concepts**, taught progressively day by day.
 Each subfolder or file corresponds to a daily session covering key topics such as:
@@ -204,7 +204,7 @@ It’s designed to help learners gain strong fundamentals before moving on to la
 
 ---
 
-### `/reporters-desk`
+### [/reporters-desk](https://github.com/MazahirHaroon/inspect-frontend/tree/main/reporter-desk)
 
 This folder represents our **project-based learning series**, where we apply all the JavaScript concepts to build a complete, real-world web application — _Reporter’s Desk_.
 It’s a newsroom workflow app that helps learners connect core programming skills with practical product thinking.
@@ -212,7 +212,7 @@ Each subfolder (Day 1, Day 2, etc.) represents a step in building the applicatio
 
 ---
 
-### `/ObjectAndArrays`
+### [/object-and-arrays](https://github.com/MazahirHaroon/inspect-frontend/tree/main/object-and-arrays/LibraryManagementSystem)
 
 This folder introduces a **new foundational mini-series** focused on understanding **Objects and Arrays** in JavaScript through relatable, real-world examples.
 
